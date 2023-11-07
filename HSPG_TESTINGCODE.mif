@@ -1,0 +1,25 @@
+WIDTH=16;
+DEPTH=2048;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0000: B800; -- LOADI 0
+0001: 9801; -- OUT LEDs
+0002: 9000; -- IN Switches
+0003: 100D; -- STORE SwitchesOn
+0004: 9801; -- OUT LEDs
+0005: 9830; -- OUT Servo
+0006: 2802; -- JUMP START
+0007: 0000; -- SwitchState: DW 0
+0008: 0000; -- Score: DW 0
+0009: 0000; -- CompareZero: DW 0
+000A: 0001; -- IncrementalValue: DW 1
+000B: 0000; -- RandomNumber: DW 0
+000C: 0000; -- LitLEDCount: DW 0
+000D: 0000; -- SwitchesOn: DW 0
+000E: 0000; -- TimeTook: DW 0
+000F: 0000; -- AddToScore: DW 0
+[0010..07FF] : 0000; -- [empty memory]
+END;
