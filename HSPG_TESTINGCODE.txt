@@ -1,0 +1,32 @@
+ORG 0
+
+Reset:
+LOADI 0
+OUT LEDs
+
+Start:
+IN Switches
+STORE SwitchesOn
+OUT LEDs
+OUT Servo
+
+JUMP START
+
+; Variables
+SwitchState: DW 0
+Score: DW 0
+CompareZero: DW 0
+IncrementalValue: DW 1
+RandomNumber: DW 0
+LitLEDCount: DW 0
+SwitchesOn: DW 0
+TimeTook: DW 0
+AddToScore: DW 0
+
+; IO Adress constants
+Switches: EQU 000
+LEDs: EQU 001
+Timer: EQU 002
+Hex0: EQU 004
+Hex1: EQU 005
+Servo: EQU 048
