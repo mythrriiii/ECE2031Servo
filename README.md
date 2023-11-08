@@ -40,4 +40,18 @@ This contains the completed base functionality
 **Issues**
 
 - Only basic, need to add the additional features
-	
+
+
+ ## HSPG_TestingCode_v3 
+
+**New Features**
+This contains the completed base functionality and an extra feature to control how much it spins exactly in increments of 9.
+
+- Servo resets at the neutral position of 15ms pulse width
+- Pulse widths are exactly 0.5ms, 0.6ms, ...... 2.5ms
+- The servo increments by 9 degrees.
+- The (switch input x 9) refers to the final angle the servo turns by from the CCW or left extreme. For e.g.: 1 x 9 = 9 degrees, 5 * 9 = 45 degrees.
+
+**Issues**
+
+- Right now can increment by 9, change the clock maybe? to increment by 1 degree.
