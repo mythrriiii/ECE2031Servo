@@ -36,7 +36,8 @@ Ensures that the servo controls are between 0.5ms and 2.5ms without using safety
 - Servo reset was at 0.1ms instead of 0.5
 - Pulse widths are off by 0.1ms or 1 clock cycle
 
-## HSPG_TestingCode_v2 BASE FUNCTIONALITY
+## HSPG_TestingCode_v2 
+BASE FUNCTIONALITY
 
 **New Features**
 This contains the completed base functionality
