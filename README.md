@@ -1,7 +1,14 @@
 # ECE2031Servo
 
 ## Index
+- [HSPG_Provided](#HSPG_Provided)
+- [HSPG_TestingCode.TXT](#HSPG_TestingCode.TXT)
+- [HSPG_TestingCode.MIF](HSPG_TestingCode.MIF)
 - [HSPG_TestingCode_v1](#HSPG_TestingCode_v1)
+- [HSPG_TestingCode_v2 BASE FUNCTIONALITY](#HSPG_TestingCode_v2)
+- [HSPG_TestingCode_v3](#HSPG_TestingCode_v3)
+- [HSPG_TestingCode_v4](#HSPG_TestingCode_v4)
+
 
 
 ## HSPG_Provided
@@ -55,3 +62,21 @@ This contains the completed base functionality and an extra feature to control h
 **Issues**
 
 - Right now can increment by 9, change the clock maybe? to increment by 1 degree.
+
+
+## HSPG_TestingCode_v4 
+
+**New Features**
+This contains the completed base functionality and an extra feature that continuously spins from 0 to 180 position and back
+
+- Servo resets at the 0 position with 0.5ms pulse width
+- The servo increments by 9 degrees up to spin CCW to the left extreme and then decrements by 9 degrees down to 0 to spin CW to the right extreme.
+- When the reset button is hit, the servo returns to position 0 and starts again.
+
+**Issues**
+
+- Let the user pick from where to where they want continuous turning
+- Combine it with the other features.
+- Why is changing the clock throwing errors?
+  
+
