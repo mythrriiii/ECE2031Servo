@@ -52,11 +52,11 @@ begin
 					-- Reset the inCounter and change the command variable
 					incCount <= x"0000";
 					 
-					if ((command < x"0015") and (to0 = "00")) then 
+					if ((command < x"0019") and (to0 = "00")) then 
 						command <= command + 1;
 						-- +1 +1 +1 until 25 then goes 5. 
 						
-					elsif (command >= x"0015") then 
+					elsif (command >= x"0019") then 
 						command <= command - 1;
 						to0 <= "01";
 						
