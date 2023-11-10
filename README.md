@@ -79,5 +79,21 @@ This contains the completed base functionality and an extra feature that continu
 - Let the user pick from where to where they want continuous turning
 - Combine it with the other features.
 - Why is changing the clock throwing errors?
-  
+
+
+## HSPG_TestingCode_v5 
+
+**New Features**
+This contains the completed base functionality and an extra that can output Morse Code.
+
+- Servo resets at the 0 position with 0.5ms pulse width, every time the key is 0
+- The servo increments by 9 degrees up to spin CCW to the left for dot and by 9*3 = 27 degrees for dash and stay at the last position when then letter is over
+- Go back to 0 for and then input again. 
+- When the reset button is hit, the servo returns to position 0 and starts again.
+
+**Issues**
+
+- Combine it with the other features.
+- Add more features apart from letters
+    
 
