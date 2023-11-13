@@ -8,6 +8,10 @@
 - [HSPG_TestingCode_v2 BASE FUNCTIONALITY](#HSPG_TestingCode_v2)
 - [HSPG_TestingCode_v3](#HSPG_TestingCode_v3)
 - [HSPG_TestingCode_v4](#HSPG_TestingCode_v4)
+- [HSPG_TestingCode_v5](#HSPG_TestingCode_v5)
+- [HSPG_TestingCode_v6](#HSPG_TestingCode_v6)
+- [HSPG_TestingCode_v7](#HSPG_TestingCode_v7)
+ 
 
 
 
@@ -95,5 +99,37 @@ This contains the completed base functionality and an extra that can output Mors
 
 - Combine it with the other features.
 - Add more features apart from letters
+- Slight error, change if 4 pattern then continuously spins
+
+
+## HSPG_TestingCode_v6 
+
+**New Features**
+This contains the completed base functionality and an extra that can output Morse Code accurately.
+
+- Same as v5 but with letterCount going upto 5 instead of 4
+
+**Issues**
+
+- Combine it with the other features.
+- Add more features apart from letters
+
+
+## HSPG_TestingCode_v7 
+
+**New Features**
+This contains the completed base functionality and can spin with increments provided by the user.
+
+- Servo resets at the 0 position with 0.5ms pulse width, every time the key is 0
+- The servo increments by 9*input to spin back and forth. There are 20 options.
+
+**Issues**
+
+- Combine it with the other features.
+- Add more features apart from letters
+
+  
+
+
     
 
