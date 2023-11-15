@@ -26,6 +26,7 @@ architecture a of HSPG is
     signal count   : std_logic_vector(15 downto 0);  -- internal counter
 	 signal sos_count: std_logic_vector(15 downto 0); -- counter for SOS signal
 	 signal direction: std_logic;  -- 0 is moving left, 1 is moving right
+	 signal delayCount : std_logic_vector(15 downto 0);  -- count the delay 
 	 
 
 begin
@@ -39,29 +40,44 @@ begin
             count <= x"0000";
 				sos_count <= x"0000";
 				direction <= '0';
+				delayCount <= x"0000";
+				command <= x"0004";
+				
         elsif rising_edge(CLOCK) then
             count <= count + 1;
+				delayCount <= delayCount + 1; 
 				
-				sos_count <= sos_count + 1;
-				if (direction = '0') then
-					if ((command = x"0005") or (command = x"0006") or (command = x"0007") or (command = x"0011") or (command = x"0012")) then
-						command <= command + 1;
-					elsif ((command = x"0008") or (command = x"000B") or (command = x"000E")) then
-						command <= command + 3;
-					elsif (command = x"0013") then
-						command <= command + 1;
-						direction <= '1';
-					end if;
-				else 
-					if ((command = x"0014") or (command = x"0013") or (command = x"00012") or (command = x"0008") or (command = x"0007")) then 
-						command <= command - 1;
-					elsif ((command = x"0011") or (command = x"000E") or (command = x"000B")) then
-						command <= command - 3;
-					elsif (command = x"0006") then
-						command <= command - 1;
+				
+				if (delayCount = x"1000") then  -- 4096 ms has elapsed
+					delayCount <= x"0000";
+				
+					if (direction = '0') then
+						if ((command = x"0004") or (command = x"0005") or (command = x"0006") or (command = x"0010") or (command = x"0011")) then
+							command <= command + 1;
+						elsif ((command = x"0007") or (command = x"000A") or (command = x"000D")) then
+							command <= command + 3;
+						elsif (command = x"0012") then
+							command <= command + 1;
+							direction <= '1';
+						end if;
+					else 
+						command <= x"0004";
 						direction <= '0';
+				--		if ((command = x"0014") or (command = x"0013") or (command = x"00012") or (command = x"0008") or (command = x"0007")) then 
+					--		command <= command - 1;
+					--	elsif ((command = x"0011") or (command = x"000E") or (command = x"000B")) then
+						--	command <= command - 3;
+				--		elsif (command = x"0006") then
+					--		command <= command - 1;
+						--	direction <= '0';
+						--end if;
 					end if;
+					
+					
 				end if;
+				
+				
+				
 				
             if count = x"00C7" then  -- 20 ms has elapsed
                 -- Reset the counter and set the output high.
