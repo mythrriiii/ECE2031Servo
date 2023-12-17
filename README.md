@@ -127,9 +127,16 @@ This contains the completed base functionality and can spin with increments prov
 
 - Combine it with the other features.
 - Add more features apart from letters
+- 
 
-  
+## HSPG_TestingCode_v9 FINAL 
 
+**New Features**
+This contains the completed project with all 4 sub-features integrated into one. 
 
+-  SOS machine on Bit 9
+-  Configurable Range machine on Bit 8
+-  Morse Code machine on Bit 7
+-  Continuous Spinning 000 for Control Bits
     
 
