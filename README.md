@@ -11,6 +11,7 @@
 - [HSPG_TestingCode_v5](#HSPG_TestingCode_v5)
 - [HSPG_TestingCode_v6](#HSPG_TestingCode_v6)
 - [HSPG_TestingCode_v7](#HSPG_TestingCode_v7)
+- [HSPG_TestingCode_v9_FINAL](#HSPG_TestingCode_v9_FINAL)
  
 
 
@@ -129,7 +130,7 @@ This contains the completed base functionality and can spin with increments prov
 - Add more features apart from letters
 - 
 
-## HSPG_TestingCode_v9 FINAL 
+## HSPG_TestingCode_v9_FINAL 
 
 **New Features**
 This contains the completed project with all 4 sub-features integrated into one. 
